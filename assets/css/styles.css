@@ -44,6 +44,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -321,6 +324,42 @@ ul {
   width: 16px;
   height: 16px;
   fill: var(--negro-texto);
+}
+
+/* Instagram navbar */
+.nav-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--dorado);
+  border-radius: 50%;
+  transition: all var(--transicion) !important;
+  color: var(--dorado-oscuro) !important;
+}
+
+.nav-instagram::after {
+  display: none !important;
+}
+
+.nav-instagram:hover {
+  background: var(--dorado) !important;
+  color: var(--negro-texto) !important;
+  transform: translateY(-1px);
+}
+
+.nav-instagram svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 /* Hamburguesa */
@@ -1012,6 +1051,37 @@ ul {
   box-shadow: var(--sombra-suave);
 }
 
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: var(--blanco);
+  color: var(--dorado-oscuro);
+  font-family: var(--font-cuerpo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  border: 1px solid var(--dorado);
+  transition: all var(--transicion);
+  cursor: pointer;
+}
+
+.btn-instagram:hover {
+  background: var(--dorado-bg);
+  color: var(--dorado-oscuro);
+  transform: translateY(-1px);
+  box-shadow: var(--sombra-suave);
+}
+
+.btn-instagram svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--dorado-oscuro);
+}
+
 /* Mapa */
 .contacto-mapa {
   position: relative;
@@ -1068,6 +1138,39 @@ ul {
 
 .footer-links a:hover {
   color: var(--dorado);
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 50%;
+  transition: all var(--transicion);
+}
+
+.footer-social a:hover {
+  background: var(--dorado);
+  border-color: var(--dorado);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255, 255, 255, 0.6);
+  transition: fill var(--transicion);
+}
+
+.footer-social a:hover svg {
+  fill: var(--negro-footer);
 }
 
 .footer-copy {
@@ -1181,6 +1284,16 @@ ul {
     font-size: 1rem;
     letter-spacing: 2px;
     color: var(--negro-texto);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-social-mobile {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
   }
 
   .hero-title {
